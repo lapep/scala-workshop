@@ -24,7 +24,7 @@ object FirstExercise {
   }
 
   //Hint1: need to get all the strings to one List, Hint2: make sure char case is ignored, Hint3: lookup other higher order functions available on Lists
-  def findMostFrequentLetter(listOfEmployees: List[Employee]) = {
+  def findMostFrequentLetter(listOfEmployees: List[Employee]): (Char, Int) = {
     val allStrings = listOfEmployees
       .foldLeft(List.empty[String]){(acc, empl) =>
         empl.name :: empl.benefits ++ acc
