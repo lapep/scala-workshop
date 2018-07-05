@@ -6,7 +6,7 @@ class FirstExerciseSpec extends FlatSpec with Matchers {
   it should "return the length of each name" in {
     val lengthList = findLengthOfEachName(guestNames)
 
-    lengthList shouldBe List(5, 4, 7, 6, 4, 4, 7, 5)
+    lengthList shouldBe List(5, 4, 7, 6, 4, 4, 7, 5, 4)
   }
 
   it should "return empty list if input list is empty" in {
@@ -36,13 +36,19 @@ class FirstExerciseSpec extends FlatSpec with Matchers {
   it should "return total number of characters in the list" in {
     val totalLen = findTotalLength(guestNames)
 
-    totalLen shouldBe 42
+    totalLen shouldBe 46
   }
 
   it should "return all of the benefits for all the people" in {
     val result = findAllBenefits(employees)
 
     result should contain allOf ("pension", "bonus", "healthcare")
+  }
+
+  it should "return the most frequent letter from employees String values" in {
+    val result = findMostFrequentLetter(employees)
+
+    result shouldBe ('n', 4)
   }
 
 }
