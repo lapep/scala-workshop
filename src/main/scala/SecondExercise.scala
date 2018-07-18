@@ -9,25 +9,12 @@ object SecondExercise {
   val hotels = List(Hotel("Hilton", 200, London), Hotel("Novotel", 180, Moscow), Hotel("HolidayInn", 240, NewYork), Hotel("HolidayInn", 100, London))
 
   //Try to implement these functions with pattern matching after completing https://www.scala-exercises.org/std_lib/pattern_matching
-  def increaseLondonHotelPrices(list: List[Hotel], increaseBy: Int): List[Hotel] = {
-    list.map {
-      case Hotel(name, price, London) => Hotel(name, price + increaseBy, London)
-      case hotel => hotel
-    }
-  }
+  def increaseLondonHotelPrices(list: List[Hotel], increaseBy: Int): List[Hotel] = ???
 
   //Try to implement recursively. HINT: remember matching on a List
-  def returnLastHotel(ls: List[Hotel]): Hotel = ls match {
-    case h :: Nil  => h
-    case _ :: tail => returnLastHotel(tail)
-    case Nil => throw new NoSuchElementException
-  }
+  def returnLastHotel(ls: List[Hotel]): Hotel = ???
 
   //Try to implement recursively. HINT: remember matching on a List
-  def returnSecondLastHotel(ls: List[Hotel]): Hotel = ls match {
-    case h :: _ :: Nil  => h
-    case _ :: tail => returnSecondLastHotel(tail)
-    case Nil => throw new NoSuchElementException
-  }
+  def returnSecondLastHotel(ls: List[Hotel]): Hotel = ???
 
 }
